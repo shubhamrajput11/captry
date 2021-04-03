@@ -21,7 +21,7 @@ spec:
         app: gsvcapstone
     spec:
       containers:
-        - image: 30011802/gsvcapstone
+        - image: shubhamrajput11/gsvcapstone
           imagePullPolicy: Always
           name: gsvcapstone
           ports:
