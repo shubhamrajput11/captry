@@ -32,10 +32,10 @@ jobs:
           name: Build, tag and push docker image to docker.io
           command: |
             docker login -u ${DOCKER_USER} -p ${DOCKER_PWD}
-            docker build -t shubhamrajput11/capstone-project-cloud-devops:${CIRCLE_WORKFLOW_ID:0:7} .
-            docker push shubhamrajput11/capstone-project-cloud-devops:${CIRCLE_WORKFLOW_ID:0:7}
-            docker tag shubhamrajput11/capstone-project-cloud-devops:${CIRCLE_WORKFLOW_ID:0:7} shubhamrajput11/capstone-project-cloud-devops:firsttry
-            docker push shubhamrajput11/capstone-project-cloud-devops:firsttry
+            docker build -t shubhamrajput11/gsvcapstone:${CIRCLE_WORKFLOW_ID:0:7} .
+            docker push shubhamrajput11/gsvcapstone:${CIRCLE_WORKFLOW_ID:0:7}
+            docker tag shubhamrajput11/gsvcapstone:${CIRCLE_WORKFLOW_ID:0:7} shubhamrajput11/gsvcapstone:latest
+            docker push shubhamrajput11/gsvcapstone:latest
   
   create-deployment:
     executor: aws-eks/python3
@@ -92,7 +92,7 @@ workflows:
             - aws-eks/create-cluster
       - aws-eks/update-container-image:
           cluster-name: gsvcapstone
-          container-image-updates: gsvcapstone=shubhamrajput11/capstone-project-cloud-devops
+          container-image-updates: gsvcapstone=shubhamrajput11/gsvcapstone
           post-steps:
               - kubernetes/delete-resource:
                   resource-names: gsvcapstone
