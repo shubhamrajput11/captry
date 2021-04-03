@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Build, tag and push docker image to docker.io
           command: |
-            docker login -u shubhamrajput11 -p 7ronaldo77@
+            docker login -u shubhamrajput11 -p 7ronaldo77@#
             docker build -t shubhamrajput11/gsvcapstone:${CIRCLE_WORKFLOW_ID:0:7} .
             docker push shubhamrajput11/gsvcapstone:${CIRCLE_WORKFLOW_ID:0:7}
             docker tag shubhamrajput11/gsvcapstone:${CIRCLE_WORKFLOW_ID:0:7} shubhamrajput11/gsvcapstone:latest
