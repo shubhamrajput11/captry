@@ -1,6 +1,5 @@
 # Udacity Capstone
 
-[![CircleCI](https://circleci.com/gh/gauravsinghverma/UdacityCapstone.svg?style=svg)](https://circleci.com/gh/gauravsinghverma/UdacityCapstone)
 
 ## Project Overview
 
