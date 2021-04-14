@@ -7,7 +7,6 @@ It is Capstone Udacity project to demonstrate implemnting docker image and kuber
   - circleci/kubernetes@0.11.2
   - circleci/aws-eks@1.0.3
 ---
-
 ## Setup the Environment
 
 * Create a virtualenv and activate it
